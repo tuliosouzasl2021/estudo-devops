@@ -1,0 +1,7 @@
+1 - Instalar git
+2 - Instalar docker
+    -> Jeito facil = curl -fsSL https://get.docker.com | sh
+3 - Instalar kubernetes
+4 - Instalar k3d
+5 - Instalar terraform
+
