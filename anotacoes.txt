@@ -39,6 +39,11 @@ A fase de testes é onde é executados os testes, as analises de código e verif
 
 Na fase de Release é aonde eu gero o artefato de entrega, pode ser meu arquivo executavel, a minha imagem docker, o meu arquivo ali .ja ou a, enfim é oque vai ser usado para fazer o deploy em meu ambiente, e nesse ponto é que entram as pip-lines de CID.
 
-No deploy 32:16     
+No deploy é aonde a aplicação é entregue no ambiente e aqui é onde entra em cena as ferramentas de infraestrutura como código, como o terraform e o assimble, alem de serviço de cloud como: aws, azure e google. tudo isso integrado na pip-line de "CID".
+
+Quando chega na operação eu preciso garantir que a aplicação vai ser executada no ambiente com instabilidade, confiabilidade e resiliencia, e aqui o kubernetes ele entra como protagonista como a principal ferramenta de orquestração de container no mercado.
+
+Com a aplicação entregue sendo executada no ambiente chega a hora de monitorar toda a informação e coletar as metricas para aplicação e também do ambiente, para ser utilizadas no planejamento das melhorias alem disso é claro a atencipar qualquer tipo de problema que possa acontecer e é aqui que entra as ferramentas como: prometheus, ieger, elastic e grafana. todos entra em ação em forma simutanea.
+Depois volta dnv para o ciclo de planejamento e tudo recomeça.      
 
 
