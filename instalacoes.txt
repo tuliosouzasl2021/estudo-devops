@@ -1,7 +1,14 @@
 1 - Instalar git
+
 2 - Instalar docker
     -> Jeito facil = curl -fsSL https://get.docker.com | sh
-3 - Instalar kubernetes
-4 - Instalar k3d
-5 - Instalar terraform
+    -> https://docs.docker.com/engine/install/ubuntu/ 
 
+3 - Instalar kubernetes 
+    -> https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+4 - Instalar k3d
+    -> wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+
+5 - Instalar terraform
+    -> https://www.terraform.io/downloads
