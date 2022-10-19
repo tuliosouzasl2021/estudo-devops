@@ -47,3 +47,63 @@ Com a aplicação entregue sendo executada no ambiente chega a hora de monitorar
 Depois volta dnv para o ciclo de planejamento e tudo recomeça.      
 
 
+
+A METODOLOGIA SE BASEA EM 5 FUNDAMENTOS
+
+FOCO, PRÁTICA, HABILIDADES PESSOAIS (SOFT SKILLS), POSICIONAMENTO E RELACIONAMENTO.
+
+EM CADA UMA DESSAS AULAS DA SERIE EU VOU ME APROFUNDAR EM UM DESSES FUNDAMENTOS.
+
+
+
+# COMEÇANDO COM O DOCKER #
+
+
+docker container run hello-world
+docker container run --name meu_container hello-world
+docker container run --rm hello-world
+docker container run -it ubuntu /bin/bash
+docker container run -it --rm ubuntu /bin/bash
+docker container run -d nginx
+docker container run -d -p 8080:80 nginx
+docker container run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres postgres
+
+
+docker container exec -it nginx /bin/bash
+
+
+docker container rm <id_ou_nome_do_container>
+docker container rm -f <id ou nome do container>
+
+
+docker container ls
+docker container ls -a
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
