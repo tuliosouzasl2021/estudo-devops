@@ -1,0 +1,165 @@
+# Anotações do curso DevOps do Fabricio Veronez #
+
+#RUMOAOELITE
+
+Vamos aprender - Docker, kubernetes, terraform, jenkins, prometheus e grafana.
+
+Devops é uma cultura colaborativa, que engloba uma serie de Práticas, Ferramentas e Filosofias, que tem como objetivo automatizar e padronizar os processos de produção de software bem como também integrar as equipes de desenvolvimento e infraestrutura e garantir mais produtividade e confiabilidade na entrega das aplicações.
+
+Os Fundamentos do devops. 
+
+A cultura devops se basea em 5 pilares, conhecido pela sigla "CALMS", Cultura, Automação, Lean ou Esforço, Medição e Compartilhamento. 
+
+O primeiro pilhar a "Cultura" fala sobre a mudança de pensamento e comportamento pra tornar as equipes colaborativas e comunicativas entre si, promovendo uma relação mais saudavel entre elas e essa mudança de pensamento precisa atingir todo o fluxo devops desde o planejamento do software pensando na integração dos processos pensando nas equipes de desenvolvimento, QA e Operações até chegar ao cliente. Outra mudança importante de pensamento é com relação ao foco na qualidade do produto e não só mais ali nas tarefas que dessa forma todos os profissionais passa a se responsabilizar como equipe por eventuais falhas e trabalha em conjunto para resolver o mais rapido possivel, acaba com aquela historia que a culpa é do dev ou a culpa é do sysadmin, a culpa passa a ser da equipe multidiciplinar e todos colaboram para que o negocio sai vencedor
+
+No quisito "Automação" devops defende a construção de piplines por processos repetitivos e que consome tempo dos profissionais aumentando muito a produtividade da equipe, com isso algumas atividades que poderiam durar dias passa a durar horas ou até minutos e assim você envita falhas humanas disnecessaria em processos manuais evita o desgastes e a dismotivação do proficional.
+
+Outro pilar importante dis respeito aos conceitos de "Lean" a cultura devops defende o uso de métodologias ageis no processo de criação de software de modo a promover o aumento da frequencia do ensicros ou seja as entegras com maior quantidade e também as entregas mais curtas ou seja utilizando esprints e dessa forma as soluções chega muito mais rapidas para os clientes e podem ser validadas e otimizadas com maior velocidade também.
+
+Com relação as "Métricas" a cultura devops também defende que oque não é medido não pode ser otimizado, por isso as sessões de fedbacks e a escolha das metricas são partes muito importantes no devops tanto no qe diz respeito a otimização de processos quanto a otimização do proprio software.
+
+Outro pilar caracteristicos do devops é o "Compartilhamento" a ideia é que as equipes compartilhe entre si conhecimentos e experiencias bem sucedidas ou não pra realmente proporciona a equipe inteira uma evolução garantindo sempre a melhoria continua.
+
+
+
+COMO FUNCIONA A CULTURA DEVOPS.
+
+Como você já deve saber o ciclo de vida devops é representado pelo simbolo do infinito, justamente para identificar a necessidade da melhoria continua se repetindo o tempo todo a cada entrega, é importante lembrar que as equipes se comunicam e se colabora entre si em todas as fases garantindo o aliamento do time, a velocidade nas entregas e a qualidade do trabalho.
+São 8 fases que fazem parte do ciclo devops:
+
+Planejamento, Codificação, Construção ou Build, Teste, empacomento ou release, deploy, operação e monitoramento. 
+
+Planejamento é a parte do projeto onde você organiza oque vai ser feito, como, quem e quando vai ser entregue, ou seja, você define as tarefas, as agendas dos membros da equipe e as ferramentas que seram utilizadas, lembrando sempre de utilizar os conceitos da métodologia agio, como por exemplo as esprints de entrega e compartilhamento de informações entre as equipes, através das ferramentas de gerenciamento de projetos como: jira, nochao, trello, slack ou teams.
+
+Na fase de condificação os desenvolvedores vão codificar e revisar ali todo o código, o git é muito utilizado para controle de versão pois alem de ser muito eficiente é gratuito e opensource e alem disso é fundamental o uso de uma ferramenta de compartilhamento entre equipes, como github ou gitlab.
+
+A fase de Build é onde os códigos construidos pelos desenvolvedores são convertidos em um entregavel ambiente, é aqui que se inicia a pip-line de "CIA" nesse momento eu vou utilizar as ferramentas de gerenciamento de pacotes como: mavem, npm e nugget junto com o docker e ferramentas de pip-line de CIA como o jenkis, github accions ou gitlab cia.
+
+A fase de testes é onde é executados os testes, as analises de código e verificações de falhas, ou seja, é onde eu testo realmente o se o código criado tem algum problema é aqui que entra algumas ferramentas como jeyunit, nunit, sonarkilb e claro tudo isso rodando na pip-line de CIA.
+
+Na fase de Release é aonde eu gero o artefato de entrega, pode ser meu arquivo executavel, a minha imagem docker, o meu arquivo ali .ja ou a, enfim é oque vai ser usado para fazer o deploy em meu ambiente, e nesse ponto é que entram as pip-lines de CID.
+
+No deploy é aonde a aplicação é entregue no ambiente e aqui é onde entra em cena as ferramentas de infraestrutura como código, como o terraform e o assimble, alem de serviço de cloud como: aws, azure e google. tudo isso integrado na pip-line de "CID".
+
+Quando chega na operação eu preciso garantir que a aplicação vai ser executada no ambiente com instabilidade, confiabilidade e resiliencia, e aqui o kubernetes ele entra como protagonista como a principal ferramenta de orquestração de container no mercado.
+
+Com a aplicação entregue sendo executada no ambiente chega a hora de monitorar toda a informação e coletar as metricas para aplicação e também do ambiente, para ser utilizadas no planejamento das melhorias alem disso é claro a atencipar qualquer tipo de problema que possa acontecer e é aqui que entra as ferramentas como: prometheus, ieger, elastic e grafana. todos entra em ação em forma simutanea.
+Depois volta dnv para o ciclo de planejamento e tudo recomeça.      
+
+
+
+A METODOLOGIA SE BASEA EM 5 FUNDAMENTOS
+
+FOCO, PRÁTICA, HABILIDADES PESSOAIS (SOFT SKILLS), POSICIONAMENTO E RELACIONAMENTO.
+
+EM CADA UMA DESSAS AULAS DA SERIE EU VOU ME APROFUNDAR EM UM DESSES FUNDAMENTOS.
+
+
+
+# COMEÇANDO COM O DOCKER #
+
+
+docker container run hello-world
+docker container run --name meu_container hello-world
+docker container run --rm hello-world
+docker container run -it ubuntu /bin/bash
+docker container run -it --rm ubuntu /bin/bash
+docker container run -d nginx
+docker container run -d -p 8080:80 nginx
+docker container run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres postgres
+
+
+docker container exec -it nginx /bin/bash
+
+
+docker container rm <id_ou_nome_do_container>
+docker container rm -f <id ou nome do container>
+
+
+docker container ls
+docker container ls -a
+
+
+# CRIANDO IMAGEM - DOCKERFILE #
+
+- Dockerfile -
+FROM ubuntu
+RUN apt update
+RUN apt install curl --yes
+
+docker build -t ubuntu-curl .
+
+docker build -t ubuntu-curl -f Dockerfile .
+
+docker imagem ls 
+
+docker container run -it ubuntu-curl /bin/bash
+
+docker image prune
+
+docker image rm <id da imagem ou nome da imagem>
+
+docker tag tuliosuzasl2021/ubuntu-curl:v1 tuliosuzasl2021/ubuntu-curl:latest
+
+- Opções de uso no Dockerfile -
+
+FROM = inicializa o build de uma imagem a partir de uma imagem base
+
+WORKDIR = Define o seu diretório corrente
+
+RUN = Executa um comando
+
+LABEL = Adiciona metadados a iamgem
+
+EXPOSE = Define que o container precisa expor a porta em questão
+
+ENV = Define variáveis de ambiente
+
+COPY = Copia arquivos ou diretórios e adiciona ao sistema de arquivos da iamgem
+
+ADD = Copia arquivos ou diretórios remotos e adiciona ao sistema de arquivos da imagem
+
+CMD = Define o comando e/ou os parâmetros padrão
+
+ARG = Define um argumento pra ser usado no processo de construção
+
+ENTRYPOINT = Ajuda você a configurar um contêiner que pode ser executado como um executável
+
+VOLUME = Define volumes que devem ser definidos.
+
+
+- Docker HUB - 
+
+# Opções de Registry #
+
+Docker Hub
+Elastic Container Registry
+Azure Container Registry
+Google Container Registry
+Harbor - On primes - rodar em seu dada center em um servidor.
+
+- Subir imagem para o repositorio - 
+
+Nomeando sua imagem Docker
+
+username/repositorio:tag
+tuliosouzasl2021/teste:v1
+
+Autenticar -
+
+docker login
+Usernamen:
+Password:
+
+docker push tuliosouzasl2021/ubuntu-curl:v1
+
+
+
+# Conversão de temperatura #
+
+
+
+
+
+
+
