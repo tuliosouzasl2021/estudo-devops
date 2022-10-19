@@ -79,28 +79,52 @@ docker container rm -f <id ou nome do container>
 docker container ls
 docker container ls -a
 
- 
+
+# CRIANDO IMAGEM - DOCKERFILE #
+
+- Dockerfile -
+FROM ubuntu
+RUN apt update
+RUN apt install curl --yes
+
+docker build -t ubuntu-curl .
+
+docker build -t ubuntu-curl -f Dockerfile .
+
+docker imagem ls 
+
+docker container run -it ubuntu-curl /bin/bash
+
+docker image prune
+
+docker image rm <id da imagem ou nome da imagem>
 
 
+- Opções de uso no Dockerfile -
 
+FROM = inicializa o build de uma imagem a partir de uma imagem base
 
+WORKDIR = Define o seu diretório corrente
 
+RUN = Executa um comando
 
+LABEL = Adiciona metadados a iamgem
 
+EXPOSE = Define que o container precisa expor a porta em questão
 
+ENV = Define variáveis de ambiente
 
+COPY = Copia arquivos ou diretórios e adiciona ao sistema de arquivos da iamgem
 
+ADD = Copia arquivos ou diretórios remotos e adiciona ao sistema de arquivos da imagem
 
+CMD = Define o comando e/ou os parâmetros padrão
 
+ARG = Define um argumento pra ser usado no processo de construção
 
+ENTRYPOINT = Ajuda você a configurar um contêiner que pode ser executado como um executável
 
-
-
-
-
-
-
-
+VOLUME = Define volumes que devem ser definidos.
 
 
 
