@@ -99,6 +99,7 @@ docker image prune
 
 docker image rm <id da imagem ou nome da imagem>
 
+docker tag tuliosuzasl2021/ubuntu-curl:v1 tuliosuzasl2021/ubuntu-curl:latest
 
 - Opções de uso no Dockerfile -
 
@@ -127,6 +128,31 @@ ENTRYPOINT = Ajuda você a configurar um contêiner que pode ser executado como 
 VOLUME = Define volumes que devem ser definidos.
 
 
+
+- Docker HUB - 
+
+# Opções de Registry #
+
+Docker Hub
+Elastic Container Registry
+Azure Container Registry
+Google Container Registry
+Harbor - On primes - rodar em seu dada center em um servidor.
+
+- Subir imagem para o repositorio - 
+
+Nomeando sua imagem Docker
+
+username/repositorio:tag
+tuliosouzasl2021/teste:v1
+
+Autenticar -
+
+docker login
+Usernamen:
+Password:
+
+docker push tuliosouzasl2021/ubuntu-curl:v1
 
 
 
