@@ -1,3 +1,5 @@
 # ANOTAÇÕES KUBERNETES # 
 
+Segunda aula, gerenciamento dos containers que é o kubernetes,
+
 Lembra que foi falado na aula 1 que existe alguns problemas relacionadas a container, como por exemplo, escalabilidade, resiliencia que o docker não resolve, então o kubernetes vem justamente pra trazer essas soluções orquestrando os containers e automatizando os processos, com ele é possivel 
